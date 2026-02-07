@@ -1,0 +1,566 @@
+/*
+	Author Name: José Javier Liñán Manzaneda
+	Version: 1.0
+*/
+
+/*
+TABLE OF CONTENTS:
+
+01 RESET
+02 GRID
+03 GENERAL STYLES
+04 HEADER
+05 TYPOGRAPHY
+06 IMAGES & GRAPHICS
+07 FOOTER
+*/
+
+/*	__________________________________________
+
+	01 RESET
+	__________________________________________	*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+/*	__________________________________________
+
+	02 GRID
+	__________________________________________	*/
+
+/* Containers
+-------------------------------------------------------------------------------*/
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:130px;
+	width: 840px;
+}
+
+.greenbackground {
+	width:100%;
+	margin:0;
+	background:url("../img/background/green.gif") repeat #32834f;
+	height:auto;
+	position:relative;
+	float:left;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	color: #fff;
+	border-top: solid 4px #101010;
+	border-bottom: solid 4px #101010;
+}
+
+/* Grid >> Global
+-------------------------------------------------------------------------------*/
+
+.grid_0,
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+/* Grid >> 6 Columns
+-------------------------------------------------------------------------------*/
+
+.container .grid_0 {width:120px;}
+.container .grid_1 {width:190px;}
+.container .grid_2 {width:260px;}
+.container .grid_3 {width:400px;}
+.container .grid_4 {width:540px;}
+.container .grid_5 {width:680px;}
+.container .grid_6 {width:820px;}
+
+/* Clear floated elements
+-------------------------------------------------------------------------------*/
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/*	__________________________________________
+
+	03 GENERAL STYLES
+	__________________________________________	*/
+
+body {
+	font-family:Garamond, Georgia;
+	font-size:14px;
+	line-height:21px;
+	color:#1c1c1c;
+	/*color:black;*/
+	background:url("../img/background/patterns/pattern4.jpg");
+}
+
+/* Separators
+-------------------------------------------------------------------------------*/
+
+.top {
+	background:url("../img/background/top_border.png") no-repeat;
+	height:11px;
+	margin-bottom:21px;
+}
+
+
+.bottom {
+	background:url("../img/background/bottom_border.png") no-repeat;
+	height:21px;
+	margin-top:7px;
+}
+
+
+.separator {
+	border-top:#838383 dotted 2px;
+	padding-top:21px;
+	height:1px;
+}
+
+/* Pushers
+-------------------------------------------------------------------------------*/
+
+.pusher21 {
+	margin-top:21px;
+}
+
+.pusher14 {
+	margin-top:14px;
+}
+
+.pusher7 {
+	margin-top:7px;
+}
+
+/*	__________________________________________
+
+	04 HEADER
+	__________________________________________	*/
+
+#header_wrapper { /*Fixed background*/
+	width:100%;
+	height:120px;
+	margin:0;
+	padding:0;
+	background:url("../img/background/header.png") repeat-x;
+	z-index:20;
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+#header { /*Centered container for the header*/
+	/*width: 820px;*/
+	width: 1020px;
+	margin:0px auto;
+	position: relative;
+}
+
+/* Logo
+-------------------------------------------------------------------------------*/
+
+#logo {
+	background:url("../img/logo.png");
+	float:left;
+	width:198px;
+	height:88px;
+}
+
+/* Top menu
+-------------------------------------------------------------------------------*/
+
+#menu {
+	background:none;
+	margin:20px 0px 0px 0px; /* Some top spacing */
+	list-style:none;
+	float:left;
+}
+
+#menu li {	
+	font-size:14px;
+	line-height:21px;
+	list-style:none;
+	float:left;
+}
+
+#menu li a {
+	text-decoration:none;
+	color:#fff;
+	margin-left:28px; /* Spacing between menu items */
+	/*font-size:32px;*/
+	/*font-size:25px;*/
+	font-size:28px;
+	position:relative;
+	z-index:888; /* Required to keep navigation above content */
+}
+
+#menu li a:hover {
+	border-bottom:#fff solid 2px; /* Styles for the "current" item highlighted when clicked */ 
+	color:#fff;
+	padding-bottom:0px;
+}
+
+#menu li a.highlight {
+	border-bottom:#fff solid 2px; /* Styles for the "current" item highlighted when clicked */ 
+	color:#fff;
+	padding-bottom:0px;
+}
+
+/* Size text switcher
+-------------------------------------------------------------------------------*/
+
+#switcher {
+	font-size:18px;
+	margin:10px 10px 10px 30px;
+	float:right;
+	color:#fff;
+}
+
+#switcher .button {
+	float:left;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+
+}
+
+.giant {
+	font-size: 1.5em;
+	line-height: 1.2em;
+}
+
+.large {
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+
+.selected {
+	background:url("../img/circle.png") no-repeat;
+}
+
+.cursor_pointer {
+	cursor: pointer;
+	background:url("../img/circle.png") no-repeat;
+}
+
+/*	__________________________________________
+
+	05 TYPOGRAPHY
+	__________________________________________	*/
+
+/* Paragraphs
+-------------------------------------------------------------------------------*/
+
+p {
+	font-size:14px;
+	line-height:21px;
+	text-align:left;
+	margin-bottom:21px;
+}
+
+/* Links
+-------------------------------------------------------------------------------*/
+
+a {
+	text-decoration:none; /* See color.css for links styling */
+	color:#ed0f69;
+}
+
+a:hover {
+	color:#ed0f69;
+	border-bottom:#ed0f69 dotted 1px;
+}
+
+a:hover.noborder {
+	border:none;
+}
+
+.greenbackground a {
+	color: #fff;
+	text-decoration:underline;
+}
+
+.greenbackground a:hover {
+	color: #fff;
+	text-decoration:none;
+}
+
+/* Headings
+-------------------------------------------------------------------------------*/
+
+h1 {
+	font-size:60px;
+	line-height:45px;
+	margin-bottom:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+h1.pink {
+	font-size:90px;
+	line-height:45px;
+	font-weight:bold;
+	text-transform:uppercase;
+	color: #ed0f69;
+}
+
+h2 {
+	font-size:28px;
+	margin-bottom:14px;
+	line-height:28px;
+}
+
+h3 {
+	font-size:21px;
+	margin-bottom:14px;
+	line-height:28px;
+}
+
+h4 {
+	font-size:18px;
+	margin-bottom:7px;
+	line-height:21px;
+	text-transform:uppercase;
+}
+
+h5 {
+	font-size:14px;
+	color:#555555;
+	text-transform:uppercase;
+	border-bottom:#cccccc solid 1px;
+	padding-bottom:7px;
+	margin-bottom:7px;
+}
+
+/* Text
+-------------------------------------------------------------------------------*/
+
+.strong {
+	font-weight:bold;
+}
+
+.black {
+	color: #000;
+}
+
+.color {
+	color:#ed0f69;
+}
+
+/* Paragraphs with left colored border
+-------------------------------------------------------------------------------*/
+
+.color1, .color2, .color3, .color4 {
+	border:#cccccc solid 1px;
+	padding:5px 15px 5px 15px;
+	color:#336935;
+	background-color:#fffffd;
+}
+
+.color1 {
+	border-left:#333333 solid 7px;
+}
+
+.color2 {
+	border-left:#814444 solid 7px;
+}
+
+.color3 {
+	border-left:#808080 solid 7px;
+}
+
+.color4 {
+	border-left:#C3B091 solid 7px;
+}
+
+/* Lists
+-------------------------------------------------------------------------------*/
+
+.bullet_list, .arrow_list {
+	margin-bottom:21px;
+	color:#767676;
+}
+
+.bullet_list li {
+	list-style-image: url("../img/icons/bullet.png");
+	margin-left:14px;
+}
+
+.bullet_list_right {
+	margin-bottom:21px;
+	color:#767676;
+}
+
+.bullet_list_right li {
+	list-style-image: url("../img/icons/bullet_link.png");
+	margin: 7px 0px 7px 14px;
+	padding:7px 0px 6px 0px;
+}
+
+.arrow_list li {
+	list-style-image: url("../img/icons/ico-arrow.gif");
+	margin-left:14px;
+}
+
+.numbered_list {
+	color:#767676;
+	list-style:decimal;
+	margin-bottom:20px;
+}
+
+.numbered_list li {
+	margin-left:20px;
+}
+
+/*	__________________________________________
+
+	06 IMAGES & GRAPHICS
+	__________________________________________	*/
+
+h2 img {
+	float:left;
+	padding-right:10px;
+}
+
+.portfolio {
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+
+.portfolio li {
+	float: left;
+	margin:0px 20px 7px 0px;
+	padding: 0;
+	position: relative;
+}
+
+.portfolio li a:hover {
+	border:none;
+}
+
+.portfolio li.last {
+	margin-right:0px;
+}
+		
+.portfolio260 { /* Container for images in the "portfolio" section */
+	background:url("../img/bg260.png") no-repeat;
+	width:250px;
+	/*height:152px;*/
+	height:188px;
+	padding:11px 5px 15px 5px;
+}
+
+.thumbnails {
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+
+.thumbnails li {
+	float: left;
+	margin:0px 10px 14px 0px;
+	padding: 0;
+	position: relative;
+}
+
+.thumbnails li.last {
+	margin-right:0px;
+}
+
+.thumbnail80 { /* Small imge containers for thumbnails */
+	background:url("../img/bg80.jpg");
+	padding:5px;
+}
+
+/* Maps
+-------------------------------------------------------------------------------*/
+.map {
+	background:url("../img/bg520.png") no-repeat;
+	width:510;
+	height:324;
+	padding:18px 5px 20px 5px;
+}
+
+/*	__________________________________________
+
+	07 FOOTER
+	__________________________________________	*/
+
+#footer_wrapper { 
+	width:100%;
+	margin:0;
+	padding:0px 0px 35px 0px;
+	background:url("../img/background/footer.png") repeat-x top;
+	margin-top:45px;
+	height:auto;
+	position:relative;
+	float:left;
+}
+
+#footer { 
+	width: 840px;
+	margin:0px auto;
+	position: relative;
+}
+
+#footer .container {
+	padding:35px 0px;
+}
+
+#footer p, #footer h1, #footer h2, #footer h3, #footer .bullet_list {
+	color:#FFF;
+}
+
+#footer h1, #footer h2, #footer h3 {
+	border-bottom:#767676 dotted 1px;
+}
+
+
